@@ -13,7 +13,7 @@ export default function Home() {
   const cities = [
     { name: "Los Angeles", lat: 34.05, lon: -118.25 },
     { name: "New York", lat: 40.71, lon: -74.01 },
-    { name: "Houston", lat: 29.76, lon: -95.36 },
+    { name: "kjfhlifhjkshkshx", lat: 29.76, lon: -95.36 },
   ];
 
   const handleClick = async (city) => {
