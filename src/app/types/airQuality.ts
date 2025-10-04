@@ -6,4 +6,8 @@ export interface AirQualityData {
   o3: number;
   pm25: number;
   pm10: number;
+  predictedNo2: number;
+  predictedO3: number;
+  predictedPm25: number;
+  predictedPm10: number;
 }

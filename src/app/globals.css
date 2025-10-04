@@ -1,10 +1,14 @@
 /*@tailwind base;*/
 /*@tailwind components;*/
 /*@tailwind utilities;*/
-@import "leaflet/dist/leaflet.css";
+/*@import "leaflet/dist/leaflet.css";*/
 
 body {
   margin: 0;
   padding: 0;
   font-family: system-ui, sans-serif;
+}
+
+.text-color-lightgreen{
+  color: #3fc43f!important;
 }
