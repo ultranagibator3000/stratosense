@@ -12,16 +12,8 @@ export default function Home() {
 
   return (
       <main className="min-h-screen flex flex-col items-center bg-gray-50">
-          <head>
-              <link
-                  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-                  rel="stylesheet"
-                  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-                  crossOrigin="anonymous"
-              />
-          </head>
           {/* Header */}
-          <header className="">
+          <header className="bg-blue-700 text-white p-4 text-center text-2xl font-bold shadow w-full">
               NASA TEMPO Air Quality Dashboard
           </header>
 
@@ -41,11 +33,6 @@ export default function Home() {
                   <p>PM10: {data.pm10}</p>
               </div>
           )}
-          <script
-              src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-              integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-              crossOrigin="anonymous"
-          ></script>
       </main>
   );
 }
