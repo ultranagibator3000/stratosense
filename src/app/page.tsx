@@ -14,7 +14,7 @@ export default function Home() {
     <main className="min-h-screen flex flex-col items-center bg-gray-50">
       {/* Header */}
       <header className="bg-blue-700 text-white p-4 text-center text-2xl font-bold shadow w-full">
-        NASA TEMPO Air Quality Dashboard
+        NASA TEMPO Air Quality Dashboard dkjnvlkvlkdsjvlkdlkvn
       </header>
 
       {/* Section: Map */}
