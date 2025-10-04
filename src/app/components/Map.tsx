@@ -4,7 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { useEffect, useState } from "react";
-import { AirQualityData } from "../app/page";
+import { AirQualityData } from "../types/airQuality";
 
 // Fix default Leaflet marker icons
 delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -30,10 +30,9 @@ export default function Map({ setData }: MapProps) {
 
   return (
     <MapContainer
-      center={[39, -95]}
+      center={[39, -95]} // Center of USA
       zoom={4}
-      className="h-full w-full"
-      style={{ height: "calc(100vh - 80px)" }}
+      className="h-[400px] w-[80%] mx-auto rounded-lg shadow-md border"
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
