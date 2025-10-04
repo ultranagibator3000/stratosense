@@ -21,8 +21,8 @@ export default function Home() {
               />
           </head>
           {/* Header */}
-          <header className="bg-blue-700 text-white p-4 text-center text-2xl font-bold shadow w-full">
-              NASA TEMPO Air Quality Dashboard dkjnvlkvlkdsjvlkdlkvn
+          <header className="">
+              NASA TEMPO Air Quality Dashboard
           </header>
 
           {/* Section: Map */}
