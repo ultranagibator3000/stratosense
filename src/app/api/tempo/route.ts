@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-
+  // Mock TEMPO data (replace later with real NASA API)
   const sample = [
     { city: "New York", lat: 40.7128, lon: -74.006, no2: 18, o3: 22, pm25: 12, pm10: 25 },
     { city: "Los Angeles", lat: 34.0522, lon: -118.2437, no2: 25, o3: 30, pm25: 20, pm10: 35 },

@@ -2,38 +2,30 @@
 
 import dynamic from "next/dynamic";
 import { useState } from "react";
+import { AirQualityData } from "./types/airQuality";
 
-// Dynamic import (Leaflet only works client-side)
+// Dynamically load the map client-side only
 const Map = dynamic(() => import("./components/Map"), { ssr: false });
-
-export interface AirQualityData {
-  city: string;
-  lat: number;
-  lon: number;
-  no2: number;
-  o3: number;
-  pm25: number;
-  pm10: number;
-}
 
 export default function Home() {
   const [data, setData] = useState<AirQualityData | null>(null);
 
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="min-h-screen flex flex-col items-center bg-gray-50">
       {/* Header */}
-      <header className="bg-blue-700 text-white p-4 text-center text-2xl font-bold shadow">
+      <header className="bg-blue-700 text-white p-4 text-center text-2xl font-bold shadow w-full">
         NASA TEMPO Air Quality Dashboard
       </header>
 
-      {/* Map */}
-      <div className="flex-grow">
+      {/* Section: Map */}
+      <section className="mt-8 w-full flex flex-col items-center">
+        <h2 className="text-lg font-semibold mb-4">Air Quality Overview</h2>
         <Map setData={setData} />
-      </div>
+      </section>
 
       {/* Info Card */}
       {data && (
-        <div className="bg-white shadow p-4 fixed bottom-4 left-1/2 transform -translate-x-1/2 rounded-lg max-w-md w-[90%]">
+        <div className="bg-white shadow p-4 mt-6 rounded-lg max-w-md w-[90%]">
           <h2 className="font-semibold text-lg mb-2">{data.city}</h2>
           <p>NO₂: {data.no2}</p>
           <p>O₃: {data.o3}</p>
